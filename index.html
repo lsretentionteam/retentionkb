@@ -408,6 +408,10 @@ body.role-qa .nav-item[data-nav-role="both"]{display:flex;}
       <span class="nav-icon">📐</span> Retention Hierarchy
       <span class="nav-badge badge-both">Both</span>
     </a>
+    <a class="nav-item" data-page="policy-exceptions" data-nav-role="both" onclick="nav('policy-exceptions')">
+      <span class="nav-icon">⚠️</span> Policy Exceptions
+      <span class="nav-badge badge-both">Both</span>
+    </a>
     <a class="nav-item" data-page="discovery" data-nav-role="agent" onclick="nav('discovery')">
       <span class="nav-icon">🔍</span> Discovery & Triple-A
       <span class="nav-badge badge-agent">Agent</span>
@@ -598,22 +602,7 @@ body.role-qa .nav-item[data-nav-role="both"]{display:flex;}
       <div class="callout-text">Leading with policy as your FIRST offer = automatic deduction under Role-Specific Task — regardless of outcome. "I just want to cancel" is NOT permission to skip probing.</div>
     </div>
   </div>
-  <div class="section-h">Exception Scenarios</div>
-  <div class="callout blue">
-    <div class="callout-icon">💡</div>
-    <div class="callout-body">
-      <div class="callout-title">What "Exception" Actually Means</div>
-      <div class="callout-text">These exceptions remove <strong>only the policy discussion step</strong> from the hierarchy. Solution attempts still happen first in every case. An exception is never a reason to skip straight to cancellation.</div>
-    </div>
-  </div>
-  <table class="kb-table">
-    <thead><tr><th>Exception Scenario</th><th>What Changes</th></tr></thead>
-    <tbody>
-      <tr><td>Multiple Pros dropped the property</td><td>Skip policy step only. Still attempt: Solution (Pro switch / explanation) → Pause once → Cancel.</td></tr>
-      <tr><td>First service within 48-hour window</td><td>Skip policy step only. Still attempt: Solution → Pause (if Pro assigned) → Cancel.</td></tr>
-      <tr><td>Insufficient capacity (no Pro available in area)</td><td>Skip policy step only. <strong>Check the Decisions Tool first</strong> — it may be a service window conflict, not a true capacity gap. See the Insufficient Capacity process below.</td></tr>
-    </tbody>
-  </table>
+  <p style="font-size:13px;color:var(--text-muted);margin-top:8px;">For scenarios where policies are skipped, see the <strong>Policy Exceptions</strong> section in the navigation.</p>
 
   <div class="section-h">Insufficient Capacity — Full Process</div>
   <div class="callout amber">
@@ -910,6 +899,44 @@ body.role-qa .nav-item[data-nav-role="both"]{display:flex;}
     </tbody>
   </table>
 </div>
+
+<!-- ═══════════ POLICY EXCEPTIONS ═══════════ -->
+<div class="page" id="page-policy-exceptions">
+  <div class="page-header">
+    <div class="page-tag tag-both">Agent &amp; QA</div>
+    <h1 class="page-title">Policy Exceptions</h1>
+    <p class="page-desc">Specific scenarios where the normal retention hierarchy is modified. These exceptions do not remove the need to attempt solutions — they remove only the policy enforcement step.</p>
+  </div>
+
+  <div class="callout blue">
+    <div class="callout-icon">💡</div>
+    <div class="callout-body">
+      <div class="callout-title">What "Exception" Actually Means</div>
+      <div class="callout-text">These exceptions remove <strong>only the policy discussion step</strong> from the hierarchy. Solution attempts still happen first in every case. An exception is never a reason to skip straight to cancellation.</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Exception Scenarios</h2>
+  <table class="kb-table">
+    <thead><tr><th>Exception Scenario</th><th>What Changes</th></tr></thead>
+    <tbody>
+      <tr><td>Multiple Pros dropped the property</td><td>Skip policy step only. Still attempt: Solution (Pro Switch / explanation) → Pause once → Cancel.</td></tr>
+      <tr><td>First service within 48-hour window</td><td>Skip policy step only. Still attempt: Solution → Pause (if Pro assigned) → Cancel.</td></tr>
+      <tr><td>Insufficient capacity (no Pro available in area)</td><td>Skip policy step only. <strong>Check the Decisions Tool first</strong> — it may be a service window conflict, not a true capacity gap.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-title" style="margin-top:24px;">LawnStarter Operational Failure</h2>
+  <div class="callout red">
+    <div class="callout-icon">→</div>
+    <div class="callout-body">
+      <div class="callout-title">EXCEPTION — LawnStarter Operational Failure</div>
+      <div class="callout-text"><strong>1. Start by offering all appropriate solutions</strong> based on what fits the situation — return visit, Pro Switch, reschedule, or any combination that genuinely addresses the issue.<br><br><strong>2. If the customer does not agree to any solution</strong>, skip all policies (no 3-cut minimum, no 48-hour policy, no LGF enforcement) and offer <strong>Pause</strong> if applicable and an active Pro is assigned.<br><br><strong>3. If the customer still wants to cancel</strong>, process it without friction. Do not enforce any policy at this stage.</div>
+    </div>
+  </div>
+
+</div>
+
 
 <!-- ═══════════ POLICY ═══════════ -->
 <div class="page" id="page-policy">
@@ -2211,7 +2238,7 @@ body.role-qa .nav-item[data-nav-role="both"]{display:flex;}
         <span class="accordion-icon">⚠️</span> Cancellation is due to LawnStarter operational failure <span class="accordion-arrow">▼</span>
       </div>
       <div class="accordion-body">
-        <div class="callout red"><div class="callout-icon">→</div><div class="callout-body"><div class="callout-title">EXCEPTION HIERARCHY</div><div class="callout-text">Skip policy entirely. Solution once → Pause once → Cancel. Do not enforce 3-cut minimum.</div></div></div>
+        <div class="callout red"><div class="callout-icon">→</div><div class="callout-body"><div class="callout-title">EXCEPTION — LawnStarter Operational Failure</div><div class="callout-text"><strong>1. Start by offering all appropriate solutions</strong> based on what fits the situation — return visit, Pro Switch, reschedule, or any combination that genuinely addresses the issue.<br><br><strong>2. If the customer does not agree to any solution</strong>, skip all policies (no 3-cut minimum, no 48-hour policy, no LGF enforcement) and offer <strong>Pause</strong> if applicable and an active Pro is assigned.<br><br><strong>3. If the customer still wants to cancel</strong>, process it without friction. Do not enforce any policy at this stage.</div></div></div>
       </div>
     </div>
     <div class="accordion" style="border-color:var(--green)">
@@ -2378,5 +2405,8 @@ document.addEventListener('mousedown', e=>{
   }
 });
 </script>
+<div style="text-align:center;padding:12px 0 20px;font-size:11px;color:#9CA3AF;border-top:1px solid #E5E7EB;margin-top:40px;">
+  Authored by Karen Carmen &nbsp;·&nbsp; Retention Team &nbsp;·&nbsp; LawnStarter &nbsp;·&nbsp; 2026
+</div>
 </body>
 </html>
